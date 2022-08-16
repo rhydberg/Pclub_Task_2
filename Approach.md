@@ -27,7 +27,25 @@ checkPassword is a bool function, which takes a pointer.
 then there are 30 local variables which store 5 3 6 5 2 5 3 3 3 5 2 4 6 5 5 2 2 5 2 6 5 1 3 4 5 3 4 6 6 5 in that order.
 then process is called with the array passed to checkPassword and the address of the variable storing 5.
 
-in process
+in process takest the input array and shifts it by some value and takes another array that begins at the top of the stack (local_88, stored at edp-0x88)
+back to checkPassword.
+then prepare is called.
+there is a switch case construct which goes like:
+case('c'):  (not sure)
+case('f'):  print("comrade")
+case('t'):  print("harder")
+case('{'):  print("you\'re")
+case('}'):  print("almost")
+
+back to checkPassword.
+verify is called.
+
+format is called. The last 5 bits are trimmed. (seen from &0x1f)
+back to checkPassword.
+call checkRes
+there is a variable assigned to DAT_000120c0. from the disassembly the value at 000120c0 is 00000CC0h which in hex is 3264. converting to binary and trimming the last 5 bits and converting back to decimal gives 102. the ASCII value at 102 is f. 
+So the first letter of the password is f.
+
 
 
 
